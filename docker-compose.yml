@@ -1,0 +1,8 @@
+web:
+  build: .
+  env_file: .env
+  volumes:
+    - ".:/src"
+  ports:
+    - "8000:8000"
+  command: pm2 start --no-daemon index.js

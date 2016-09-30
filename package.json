@@ -1,0 +1,27 @@
+{
+  "name": "aws-dockerbalancer",
+  "version": "0.0.1",
+  "description": "Simple loadbalancer for managing a fixed pool of docker machines on AWS - relies on newrelic API",
+  "main": "prout.js",
+  "scripts": {
+    "start": "node prout.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antoinecardoso/Wemoms_Infra/aws-dockerbalancer"
+  },
+  "keywords": [
+    "node",
+    "aws",
+    "loadbalancing",
+    "newrelic"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "airbrake": "^1.0.3",
+    "aws-sdk": "^2.4.7",
+    "moment": "^2.14.1",
+    "newrelic": "^1.28.3",
+    "request": "^2.73.0"
+  }
+}
