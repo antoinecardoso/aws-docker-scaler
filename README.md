@@ -2,6 +2,15 @@
 
 Simple loadbalancer for managing a fixed pool of docker machines on AWS - relies on newrelic API
 
+Why ? 
+
+AWS relies on lazy-loading when it comes to spin off new instances of EC2 machines in an Elastic Load Balancer system. When you're using docker hosts, there is substantial data on 
+the system disk that make the newly started instances unresponsive for several minutes (because Docker need to load and start all its stuff BEFORE 
+it can launch your beloved and beautifully crafted code). What's the point of using a loadbalancer if you have 10 minutes of "loading" after instance start ? You need it now.
+
+That's why we imagined a system using several preconfigured docker hosts, arranged in a pool, and started/stopped/added/removed from ELB on demand. Based on newrelic 
+to "sniff" your app needs on the fly and configuring the right amount of nodes accordingly.
+
 ENV vars :
 NEWRELIC_APIKEY : API key, found in newrelic settings
 NEWRELIC_APPID : Id of newrelic application
