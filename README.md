@@ -1,6 +1,6 @@
-# aws-dockerbalancer
+# aws-docker-scaler
 
-Simple loadbalancer for managing a fixed pool of docker machines on AWS - relies on newrelic API
+Simple ELB driver for managing a fixed pool of docker machines on AWS - relies on newrelic API
 
 Why ? 
 
