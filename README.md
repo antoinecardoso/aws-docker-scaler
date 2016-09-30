@@ -12,11 +12,17 @@ That's why we imagined a system using several preconfigured docker hosts, arrang
 to "sniff" your app needs on the fly and configuring the right amount of nodes accordingly.
 
 ENV vars :
+
 NEWRELIC_APIKEY : API key, found in newrelic settings
+
 NEWRELIC_APPID : Id of newrelic application
+
 AWS_ACCESS_KEY_ID : AWS access key of the user to impersonate (give him AmazonEC2FullAccess on IAM)
+
 AWS_SECRET_ACCESS_KEY : AWS secret key of the user to impersonate
+
 AWS_REGION : ex. eu-west-1
+
 AWS_AUTOSCALING_GROUP_NAME : Auto scaling group we'll add or remove instances from
 
 MIN_APDEX=0.90 : Minimum average apdex
